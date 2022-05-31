@@ -83,7 +83,7 @@ function getCurrentWeather(response) {
   let h1 = document.querySelector("h1.today");
   let h4 = document.querySelector("h4");
   h1.innerHTML = response.data.name;
-  h4.innerHTML = ` ${response.data.main.temp}°C`;
+  h4.innerHTML = ` ${Math.round(response.data.main.temp)}°C`;
 }
 function showPosition(position) {
   let lat = position.coords.latitude;
